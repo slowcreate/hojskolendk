@@ -1,74 +1,87 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-
-  /* Vil du overskrive eller extende tailwinds indstillinger?  */
-  /* Tilføj din egen farvepalette nedenfor */
   theme: {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      red: {
-        900: "rgba(51, 0, 9, 1)",
-        800: "rgba(107, 0, 18, 1)",
-        700: "rgba(158, 0, 26, 1)",
-        600: "rgba(209, 0, 35, 1)",
-        500: "rgba(255, 9, 51, 1)",
-        400: "rgba(255, 56, 89, 1)",
-        300: "rgba(255, 107, 132, 1)",
-        200: "rgba(255, 158, 174, 1)",
-        100: "rgba(255, 204, 213, 1)",
-        50: "rgba(255, 229, 234, 1)",
+      orange: {
+        950: "rgba(25, 9, 0, 1)",
+        900: "rgba(51, 18, 0, 1)",
+        800: "rgba(102, 36, 1, 1)",
+        700: "rgba(153, 54, 0, 1)",
+        600: "rgba(204, 71, 1, 1)",
+        500: "rgba(255, 89, 0, 1)",
+        400: "rgba(255, 121, 51, 1)",
+        300: "rgba(255, 156, 102, 1)",
+        200: "rgba(255, 189, 152, 1)",
+        100: "rgba(255, 222, 204, 1)",
+        50: "rgba(255, 238, 229, 1)",
       },
 
-      blue: {
-        900: "rgba(5, 18, 21, 1)",
-        800: "rgba(10, 41, 46, 1)",
-        700: "rgba(15, 59, 67, 1)",
-        600: "rgba(20, 81, 92, 1)",
-        500: "rgba(25, 101, 114, 1)",
-        400: "rgba(39, 155, 176, 1)",
-        300: "rgba(71, 193, 215, 1)",
-        200: "rgba(134, 214, 228, 1)",
-        100: "rgba(192, 234, 241, 1)",
-        50: "rgba(226, 245, 249, 1)",
+      turkis: {
+        950: "rgba(6, 34, 29, 1)",
+        900: "rgba(13, 73, 61, 1)",
+        800: "rgba(26, 142, 119, 1)",
+        700: "rgba(40, 215, 180, 1)",
+        600: "rgba(113, 229, 206, 1)",
+        500: "rgba(184, 242, 230, 1)",
+        400: "rgba(199, 245, 236, 1)",
+        300: "rgba(212, 247, 240, 1)",
+        200: "rgba(225, 249, 245, 1)",
+        100: "rgba(242, 253, 251, 1)",
+        50: "rgba(246, 253, 252, 1)",
       },
 
-      yellow: {
-        900: "rgba(50, 44, 8, 1)",
-        800: "rgba(100, 88, 24, 1)",
-        700: "rgba(150, 133, 41, 1)",
-        600: "rgba(200, 177, 58, 1)",
-        500: "rgba(255, 223, 0, 1)",
-        400: "rgba(251, 227, 91, 1)",
-        300: "rgba(252, 234, 123, 1)",
-        200: "rgba(253, 241, 164, 1)",
-        100: "rgba(254, 248, 209, 1)",
-        50: "rgba(255, 252, 231, 1)",
+      brun: {
+        950: "rgba(8, 7, 7, 1)",
+        900: "rgba(18, 14, 14, 1)",
+        800: "rgba(34, 29, 27, 1)",
+        700: "rgba(51, 43, 41, 1)",
+        600: "rgba(68, 57, 55, 1)",
+        500: "rgba(86, 72, 71, 1)",
+        400: "rgba(124, 105, 101, 1)",
+        300: "rgba(159, 141, 137, 1)",
+        200: "rgba(191, 179, 175, 1)",
+        100: "rgba(223, 217, 216, 1)",
+        50: "rgba(238, 236, 235, 1)",
       },
 
-      neutral: {
-        900: "rgba(17, 16, 14, 1)",
-        800: "rgba(30, 29, 26, 1)",
-        700: "rgba(47, 45, 40, 1)",
-        600: "rgba(61, 58, 51, 1)",
-        500: "rgba(77, 73, 65, 1)",
-        400: "rgba(116, 110, 98, 1)",
-        300: "rgba(155, 148, 136, 1)",
-        200: "rgba(187, 183, 175, 1)",
-        100: "rgba(222, 220, 216, 1)",
-        50: "rgba(248, 248, 248, 1)",
+      beige: {
+        950: "rgba(52, 26, 0, 1)",
+        900: "rgba(97, 50, 0, 1)",
+        800: "rgba(194, 100, 0, 1)",
+        700: "rgba(255, 149, 35, 1)",
+        600: "rgba(255, 196, 133, 1)",
+        500: "rgba(255, 243, 230, 1)",
+        400: "rgba(255, 245, 235, 1)",
+        300: "rgba(255, 248, 240, 1)",
+        200: "rgba(255, 250, 246, 1)",
+        100: "rgba(255, 253, 250, 1)",
+        50: "rgba(255, 255, 255, 1)",
       },
+
+      petroleum: {
+        950: "rgba(0, 12, 15, 1)",
+        900: "rgba(1, 29, 35, 1)",
+        800: "rgba(2, 53, 65, 1)",
+        700: "rgba(2, 82, 100, 1)",
+        600: "rgba(3, 110, 134, 1)",
+        500: "rgba(4, 139, 168, 1)",
+        400: "rgba(6, 192, 234, 1)",
+        300: "rgba(56, 215, 250, 1)",
+        200: "rgba(121, 228, 252, 1)",
+        100: "rgba(190, 242, 253, 1)",
+        50: "rgba(220, 248, 254, 1)",
+      },
+
       white: "#fff",
       black: "#000",
     },
 
-    /* Tilføj din egen spacing nedenfor */
-
     /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
     fontFamily: {
-      sans: ["Prompt", "sans-serif"],
-      display: ["Courier", "monospace"] /* eksempel på ekstra font */,
+      sans: ["Outfit", "sans-serif"],
     },
 
     /* Tilføj dit typografiske hierarki herunder */
@@ -86,7 +99,8 @@ export default {
     fontWeight: {
       light: "300",
       regular: "400",
-      regular: "600",
+      semibold: "500",
+      bold: "600",
     },
 
     /* Borders - borderstørrelser herunder */
@@ -101,19 +115,20 @@ export default {
     /* Border radius størrelser herunder */
     borderRadius: {
       DEFAULT: "1.25rem",
-      none: "0px",
-      sm: "10px", // måske i REM */
-      md: "30px",
-      lg: "40px",
-      full: "9999px",
+      none: "0rem",
+      xs: "0.438rem",
+      sm: "0.875rem",
+      md: "1.344rem",
+      lg: "2.188rem",
+      xl: "3.063rem",
+      xxl: "4.938rem",
+      full: "999rem",
     },
 
     /* Box shadows herunder */
     boxShadow: {
-      drop25: "4px 4px 4px 0 rgb(0 0 0 / 0.25)" /* x y blur spread farve / opacity */,
-      drop50: "4px 4px 4px 0 rgb(0 0 0 / 0.50)",
-      inner25: "0 4px 4px 0 rgb(0 0 0 / 0.25)",
-      inner50: "0 4px 4px 0 rgb(0 0 0 / 0.50)",
+      drop: "63px 136px 42px 0px rgba(111, 110, 109, 0.00), 40px 87px 38px 0px rgba(111, 110, 109, 0.01), 23px 49px 32px 0px rgba(111, 110, 109, 0.05), 10px 22px 24px 0px rgba(111, 110, 109, 0.09), 3px 5px 13px 0px rgba(111, 110, 109, 0.10)",
+      inner: "2px 3px 9.1px 2px rgba(0, 0, 0, 0.25) inset;",
     },
 
     extend: {
@@ -139,42 +154,3 @@ export default {
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
 };
-
-/* Tilføj din egen spacing nedenfor */
-// spacing: {
-//     'm': '40px',
-// },
-
-/* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
-// fontFamily: {
-//     sans: ['Prompt', 'sans-serif'],
-//     'display': ['Courier', 'monospace'], /* eksempel på ekstra font */
-// },
-
-/* Tilføj dit typografiske hierarki herunder */
-// fontSize: {
-//     base: ['1rem', { lineHeight: '1.5rem' }],
-//     large: ['2.5rem', { lineHeight: '3.75rem' }],
-//   },
-
-/* Tilføj dit fontvægt-hierarki nedenfor */
-//   fontWeight: {
-//     regular: '400',
-//   },
-
-/* Borders - borderstørrelser herunder */
-// borderWidth: {
-//     DEFAULT: '1px',
-//     0: '0px',
-//     2: '2px',
-// },
-
-/* Border radius størrelser herunder */
-// borderRadius: {
-//     DEFAULT: '1.25rem',
-//     none: '0px',
-// },
-/* Box shadows herunder */
-// boxShadow: {
-//     drop25: '4px 4px 4px 0 rgb(0 0 0 / 0.25)', /* x y blur spread farve / opacity */
-// },
