@@ -18,3 +18,53 @@ import Link from '../components/Link.astro';
         <h5></h5>
     </section>
 </article>
+
+
+---
+
+const { url="#", cardimage="", cardimagealt="", 
+
+badgenyt="false", badgerabat="false", badgerabatsats="", badgefaapladser="false", 
+
+holdnavn="", tidspunkt="", aldersgruppe="", niveau="", pladserpaaholdet="", lokale="", holdbeskrivelse="", 
+
+underviserfoto="", underviserfotoalt="", undervisernavn="", underviserinfo="" } = Astro.props; 
+
+---
+
+<article class="card border-blue-500 border-2 @container">
+   <a href={url} class="flex flex-col justify-between h-full">
+    
+        <header class="danseholdheader mb-xs relative">
+            <img src={cardimage} alt={cardimagealt} class="object-cover h-9xl w-full">
+            {(badgenyt === "true") && <div class="badge absolute top-xs bg-blue-500 p-xs text-white rounded-r-lg">Nyt hold!</div>}
+            {(badgerabat === "true") && <div class="badge absolute md:text-small top-xs bg-red-600 p-xs right-[0] text-white rounded-full"><span>{badgerabatsats}</span> rabat!</div>}
+            {(badgefaapladser === "true") && <div class="badge  absolute bottom-xs bg-yellow-400 p-xs right-[0] text-black rounded-l-lg">Kun få pladser tilbage!</div>}
+        </header>
+            <section class="holdinfo p-xs grow border-b-2 border-blue-500">
+               <h3 class="text-small @lg:text-large mb-xs">{holdnavn}</h3>
+               <div class="flex flex-col @md:flex-row @md:justify-between mb-xs">
+                    <div class="venstre grow">
+                    <div><span>Tid:</span> <span>{tidspunkt}</span></div>
+                    <div><span>Alder:</span> <span>{aldersgruppe}</span></div>
+                    <div><span>Niveau:</span> <span >{niveau}</span></div>
+                </div>
+                <div class="hoejre grow">
+                    <div><span>Deltagere:</span> <span>{pladserpaaholdet}</span></div>
+                    <div><span>Lokale:</span> <span >{lokale}</span></div>
+                    </div>
+            </div>
+               <p class="mb-xs ">{holdbeskrivelse}</p>
+            </section>
+            <section class="underviserinfo flex my-xs gap-xs p-xs">
+                <div class="flex-none underviser">
+                    <img src={underviserfoto} alt={underviserfotoalt} class="rounded-full object-cover w-3xl h-3xl">
+                </div>
+                <div>
+                    <p>Underviser:<span> {undervisernavn}</span></p>
+                    <p>{underviserinfo}</p>
+                </div>
+            </section>
+
+   </a>
+</article>
