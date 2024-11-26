@@ -2,25 +2,33 @@
 import Link from '../components/Link.astro';
 const { url="#", cardimage="", cardimagealt="", badgefaapladser="false", pris="",
 
-destination="", varighed="", rejseliste="" } = Astro.props; 
+destination="", varighed="", firstdestination="", seconddestination="", thirddestination="", fourthdestination="" } = Astro.props; 
 
 
 ---
 
-<article class="card @container">
+<article class="card @container w-[425px] text-turkis-50 ">
     <a href={url} class="flex flex-col justify-between h-full">
-    <section class="">
-        <img src={cardimage} alt={cardimagealt} class="object-cover h-9xl w-full">
-        <Link>{varighed}</Link>
-        {(badgefaapladser === "true") && <div class="badge absolute bottom-xs bg-yellow-400 p-xs right-[0] text-black rounded-l-lg"><h5>Kun få pladser tilbage!</h5></div>}
-        <h4>{destination}</h4>
+    <section class="relative z-10">
+        <img src={cardimage} alt={cardimagealt} class="object-cover h-72 w-full rounded-t-xxl z-0">
+       <div>
+            <Link class="absolute top-2 right-3 z-20">{varighed}</Link>
+            <div class="badge absolute top-20 bg-turkis-500 p-xs left-[0] text-petroleum-700 rounded-r-md z-10">
+                Kun få pladser tilbage!
+            </div>
+            <h4>{destination}</h4>
+        </div>
     </section>
-    <section>
-       <h5>{pris}</h5>
+    
+    <section class="bg-turkis-900 border-t-turkis-500 h-10 flex flex-row justify-between">
+        <h5>Ca. pris</h5>
+        <h5>{pris}</h5>
     </section>
-    <section>
-        <h5>{rejseliste}</h5>
-    </section>
+    <section class="bg-turkis-50 rounded-b-xxl text-brun-500">
+        <h5>{firstdestination}</h5>
+        <h5>{seconddestination}</h5>
+        <h5>{thirddestination}</h5>
+        </section>
     </a>
 </article>
 <!-- 
