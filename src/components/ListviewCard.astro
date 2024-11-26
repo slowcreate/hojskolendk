@@ -1,38 +1,31 @@
 ---
 import Link from '../components/Link.astro';
+const { url="#", cardimage="", cardimagealt="", badgefaapladser="false", pris="",
+
+destination="", varighed="", rejseliste="" } = Astro.props; 
+
+
 ---
 
-<article>
-    <section>
-        <Link></Link>
-        <div></div>
-        <h4></h4>
+<article class="card @container">
+    <a href={url} class="flex flex-col justify-between h-full">
+    <section class="">
+        <img src={cardimage} alt={cardimagealt} class="object-cover h-9xl w-full">
+        <Link>{varighed}</Link>
+        {(badgefaapladser === "true") && <div class="badge absolute bottom-xs bg-yellow-400 p-xs right-[0] text-black rounded-l-lg"><h5>Kun få pladser tilbage!</h5></div>}
+        <h4>{destination}</h4>
     </section>
     <section>
-       <h5></h5>
+       <h5>{pris}</h5>
     </section>
     <section>
-        <h5></h5>
-        <h5></h5>
-        <h5></h5>
-        <h5></h5>
+        <h5>{rejseliste}</h5>
     </section>
+    </a>
 </article>
+<!-- 
 
-
----
-
-const { url="#", cardimage="", cardimagealt="", 
-
-badgenyt="false", badgerabat="false", badgerabatsats="", badgefaapladser="false", 
-
-holdnavn="", tidspunkt="", aldersgruppe="", niveau="", pladserpaaholdet="", lokale="", holdbeskrivelse="", 
-
-underviserfoto="", underviserfotoalt="", undervisernavn="", underviserinfo="" } = Astro.props; 
-
----
-
-<article class="card border-blue-500 border-2 @container">
+<article class="card border-2 @container">
    <a href={url} class="flex flex-col justify-between h-full">
     
         <header class="danseholdheader mb-xs relative">
@@ -67,4 +60,4 @@ underviserfoto="", underviserfotoalt="", undervisernavn="", underviserinfo="" } 
             </section>
 
    </a>
-</article>
+</article> -->

@@ -1,4 +1,5 @@
 ---
+import ListviewCard from "../components/ListviewCard.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
@@ -108,8 +109,34 @@ import MainLayout from "../layouts/MainLayout.astro";
                 </g>
             </g>
         </svg>
-</article>
-    
 
-
+        <section>
+            <ListviewCard
+            url="#"
+            cardimage="rejse.jpeg"        
+            cardimagealt="Første rejse til Mexico"
+            badgefaapladser="2 pladser tilbage!"
+            destination="Caribien - Hawaii - Mexico"
+            varighed="3 måneder"
+            pris=""
+            ></ListviewCard>
+        </section>
+    </article>
 </MainLayout>
+
+<!-- badgenyt="true"
+            badgerabat="true"
+            badgerabatsats="10%"
+            badgefaapladser="true"
+            holdnavn="Ballroom for begyndere"
+            tidspunkt="Fredag 20-22"
+            aldersgruppe="25+"
+            niveau="Begynder"
+            pladserpaaholdet="20"
+            lokale="Koncertsalen"
+            holdbeskrivelse="Ballroom er en meget romantisk dans. Så find din partner, og meld jer til ballroom dans for begynder, og mærk suset i den romantiske dans."
+            underviserfoto="karnahage.jpg"
+            underviserfotoalt="Karna Hage - underviser på ballroom for begyndere"
+            undervisernavn="Karna Hage"
+            underviserinfo="Karna er uddannet Ballroom instruktør fra Danse-Staffans skole og har 20 års erfaring som danseinstruktør."
+            > -->
