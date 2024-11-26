@@ -1,5 +1,4 @@
 ---
-import Button from '../components/Button.astro';
 ---
 <div x-data="{ showmenu: false }" class="z-50 text-petroleum-500 p-3 lg:p-4">
     <div id="navbar" class="flex justify-between items-center m-4">
@@ -31,7 +30,7 @@ import Button from '../components/Button.astro';
     <nav id="mobilmenu" class="flex flex-col content-center" 
     x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
         <ul class="p-4">
-            <li class="text-end"><a href="#" class="transition"><h5>Højskoleophold</h5></a></li>
+            <li class="text-end"><a href="/listeview" class="transition"><h5>Højskoleophold</h5></a></li>
             <li class="text-end"><a href="#" class="transition"><h5>Om os</h5></a></li>
             <li class="text-end"><a href="#" class="transition"><h5>Tilmelding</h5></a></li>
             <li class="text-end"><a href="#" class="transition"><h5>Infomøde</h5></a></li>  

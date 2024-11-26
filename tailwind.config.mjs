@@ -92,14 +92,14 @@ export default {
       smallDesk: ["2.369rem", { lineHeight: "2.25rem" }],
       mediumDesk: ["3.156rem", { lineHeight: "3rem" }],
       largeDesk: ["3.456rem", { lineHeight: "3.75rem" }],
-      xlargeDesk: ["5.735rem", { lineHeight: "4.5rem" }],
+      xlargeDesk: ["5.735rem", { lineHeight: "5rem" }],
       konsultativMobile: ["0.688rem", { lineHeight: "1.0rem" }],
       bodyMobile: ["0.813rem", { lineHeight: "1.25rem" }],
       baseMobile: ["1rem", { lineHeight: "1.5rem" }],
       smallMobile: ["1.281rem", { lineHeight: "2.25rem" }],
       mediumMobile: ["rem", { lineHeight: "3rem" }],
-      largeMobile: ["2.113rem", { lineHeight: "3.75rem" }],
-      xlargeMobile: ["2.988rem", { lineHeight: "4.5rem" }],
+      largeMobile: ["2.113rem", { lineHeight: "3.2rem" }],
+      xlargeMobile: ["2.988rem", { lineHeight: "4rem" }],
     },
 
     /* Tilføj dit fontvægt-hierarki nedenfor */
