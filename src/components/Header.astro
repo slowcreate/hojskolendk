@@ -1,6 +1,43 @@
 ---
+import Button from '../components/Button.astro';
 ---
-<div class="max-w-screen-xl mx-auto text-white">
-    Header/Navigation
-</div>
+<div x-data="{ showmenu: false }" class="z-50 text-petroleum-500 p-3 lg:p-4">
+    <div id="navbar" class="flex justify-between items-center m-4">
+        <svg class="w-14 lg:w-20" id="logo_fill" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120.6 137.72">
+            <defs>
+                <style>
+                .fill_logo {
+                    fill: #ff5900;
+                }
+                </style>
+            </defs>
+            <path class="fill_logo" d="M0,62.39V0h15.75v62.39H0ZM38.19,62.39V0h15.75v62.39h-15.75ZM8.98,37.05v-13.2h34.94v13.2H8.98ZM84.52,62.39c-4.69,0-8.74-.88-12.14-2.64-3.4-1.82-6.34-4.31-8.8-7.48l3.26-3.17c2.29,3.11,4.87,5.4,7.74,6.86,2.93,1.41,6.31,2.11,10.12,2.11,4.11,0,7.45-.97,10.03-2.9,2.58-1.94,3.87-4.63,3.87-8.1,0-2.64-.56-4.78-1.67-6.42-1.11-1.64-2.61-2.99-4.49-4.05-1.82-1.06-3.84-1.99-6.07-2.82-2.17-.82-4.37-1.64-6.6-2.46-2.17-.88-4.16-1.94-5.98-3.17-1.82-1.29-3.31-2.93-4.49-4.93-1.11-1.99-1.67-4.52-1.67-7.57s.73-5.69,2.2-7.92c1.53-2.29,3.58-4.05,6.16-5.28,2.64-1.23,5.66-1.85,9.06-1.85,3.87,0,7.33.76,10.38,2.29,3.05,1.47,5.6,3.55,7.66,6.25l-3.26,3.17c-1.94-2.41-4.11-4.22-6.51-5.46-2.35-1.29-5.13-1.94-8.36-1.94-3.75,0-6.81.94-9.15,2.82-2.29,1.82-3.43,4.37-3.43,7.66,0,2.46.56,4.46,1.67,5.98,1.12,1.53,2.58,2.82,4.4,3.87,1.88,1,3.9,1.88,6.07,2.64,2.23.76,4.43,1.58,6.6,2.46,2.17.88,4.17,1.99,5.98,3.34,1.88,1.29,3.37,2.96,4.49,5.02,1.11,2.05,1.67,4.66,1.67,7.83,0,5.1-1.7,9.03-5.1,11.79-3.34,2.7-7.89,4.05-13.64,4.05ZM10.65,137.72v-13.55h14.96c3.52,0,6.57-.67,9.15-2.02,2.64-1.35,4.66-3.34,6.07-5.98,1.41-2.7,2.11-5.95,2.11-9.77s-.73-6.92-2.2-9.5c-1.41-2.64-3.4-4.63-5.98-5.98-2.58-1.35-5.63-2.02-9.15-2.02h-15.66v-13.55h15.75c4.81,0,9.24.76,13.29,2.29,4.05,1.47,7.57,3.58,10.56,6.34s5.31,6.04,6.95,9.86c1.7,3.81,2.55,8.04,2.55,12.67s-.85,8.95-2.55,12.76c-1.64,3.81-3.96,7.1-6.95,9.86s-6.51,4.9-10.56,6.42c-3.99,1.47-8.36,2.2-13.11,2.2h-15.22ZM0,137.72v-62.39h15.75v62.39H0ZM101.41,137.72l-23.58-32.56,22.62-29.83h19.18l-25.78,32.38v-5.54l26.75,35.55h-19.18ZM65.81,137.72v-62.39h15.75v62.39h-15.75Z"/>
+        </svg>
+        <nav id="desktopmenu" class="hidden lg:block mx-10 -ml-10">
+            <ul class="flex flex-row gap-8">
+                <li><a href="#" class="transition"></a></li>
+                <li><a href="#" class="transition"></a></li>
+                <li><a href="#" class="transition"></a></li>
+                <li><a href="#" class="transition"></a></li>
+            </ul>
+        </nav>
+        <button id="burgermenu" class="" x-on:click="showmenu = ! showmenu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" stroke-width="1.5" stroke="rgba(255, 89, 0, 1)" class="w-14 h-10">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+        </button>
+    </div>
     
+    <!-- Mobile Menu -->
+    <nav id="mobilmenu" class="flex flex-col content-center" 
+    x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+        <ul class="p-4">
+            <li class="text-end"><a href="#" class="transition"><h5>Højskoleophold</h5></a></li>
+            <li class="text-end"><a href="#" class="transition"><h5>Om os</h5></a></li>
+            <li class="text-end"><a href="#" class="transition"><h5>Tilmelding</h5></a></li>
+            <li class="text-end"><a href="#" class="transition"><h5>Infomøde</h5></a></li>  
+        </ul>
+    </nav>
+</div>
+
+<div class="pt-12 lg:pt-16">
+</div>
