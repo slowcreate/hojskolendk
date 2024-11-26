@@ -18,19 +18,19 @@
   h2 {
     @apply text-largeMobile md:text-largeDesk font-bold;
   }
-  /* h3 {
-    @apply text-4xl md:text-6xl mt-0;
+  h3 {
+    @apply text-mediumMobile md:text-mediumDesk;
   }
   h4 {
-    @apply text-2xl md:text-3xl;
+    @apply text-smallDesk md:text-smallDesk;
   }
   h5 {
-    @apply font-semibold text-lg md:text-xl;
+    @apply text-baseMobile md:text-baseDesk font-bold;
   }
   h6 {
-    @apply font-black text-lg md:text-xl;
+    @apply text-bodyMobile md:text-bodyDesk;
   }
   p {
-    @apply text-base md:text-base;
-  } */
+    @apply text-konsultativMobile md:text-konsultativDesk;
+  }
 }

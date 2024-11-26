@@ -2,7 +2,9 @@
 // Henter parametrene fra Astro.props
 const { href="#", target="_self"} = Astro.props; 
 ---
-<a href={href} target={target}>
-    <h5><slot /></h5>
-    <span class="h-6"></span>
+<div class="">
+<a href={href} target={target} class="text-petroleum-500">
+    <h6 class="text-turkis-500"><slot /></h6>
 </a>
+<div class="w-10 h-6 fill-turkis-900"></div>
+</div>

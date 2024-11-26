@@ -158,6 +158,10 @@ export default {
         "8xl": "360px",
         "9xl": "424px",
       },
+
+      backgroundImage: {
+        "gradient-card-desktop": "linear-gradient(179deg, rgba(4, 127, 127, 0.10) 0.83%, #0D493D 93.28%)",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
