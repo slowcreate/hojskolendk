@@ -86,13 +86,20 @@ export default {
 
     /* Tilføj dit typografiske hierarki herunder */
     fontSize: {
-      konsultativ: ["0.813rem", { lineHeight: "1.0rem" }],
-      body: ["0.813rem", { lineHeight: "1.25rem" }],
-      base: ["1rem", { lineHeight: "1.5rem" }],
-      small: ["1.5rem", { lineHeight: "2.25rem" }],
-      medium: ["2rem", { lineHeight: "3rem" }],
-      large: ["2.5rem", { lineHeight: "3.75rem" }],
-      xlarge: ["3rem", { lineHeight: "4.5rem" }],
+      konsultativDesk: ["1.125rem", { lineHeight: "1.0rem" }],
+      bodyDesk: ["1.5rem", { lineHeight: "1.25rem" }],
+      baseDesk: ["1.938rem", { lineHeight: "1.5rem" }],
+      smallDesk: ["2.369rem", { lineHeight: "2.25rem" }],
+      mediumDesk: ["3.156rem", { lineHeight: "3rem" }],
+      largeDesk: ["3.456rem", { lineHeight: "3.75rem" }],
+      xlargeDesk: ["5.735rem", { lineHeight: "4.5rem" }],
+      konsultativMobile: ["0.688rem", { lineHeight: "1.0rem" }],
+      bodyMobile: ["0.813rem", { lineHeight: "1.25rem" }],
+      baseMobile: ["1rem", { lineHeight: "1.5rem" }],
+      smallMobile: ["1.281rem", { lineHeight: "2.25rem" }],
+      mediumMobile: ["rem", { lineHeight: "3rem" }],
+      largeMobile: ["2.113rem", { lineHeight: "3.75rem" }],
+      xlargeMobile: ["2.988rem", { lineHeight: "4.5rem" }],
     },
 
     /* Tilføj dit fontvægt-hierarki nedenfor */
@@ -101,6 +108,7 @@ export default {
       regular: "400",
       semibold: "500",
       bold: "600",
+      extrabold: "800",
     },
 
     /* Borders - borderstørrelser herunder */
