@@ -93,7 +93,7 @@ export default {
       mediumDesk: ["3.156rem", { lineHeight: "3rem" }],
       largeDesk: ["2.8rem", { lineHeight: "3.75rem" }],
       xlargeDesk: ["5.735rem", { lineHeight: "5rem" }],
-      konsultativMobile: ["0.688rem", { lineHeight: "1.0rem" }],
+      konsultativMobile: ["1rem", { lineHeight: "1.0rem" }],
       bodyMobile: ["1rem", { lineHeight: "1.25rem" }],
       baseMobile: ["1.4rem", { lineHeight: "1.5rem" }],
       smallMobile: ["1.281rem", { lineHeight: "2.25rem" }],
