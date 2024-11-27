@@ -88,7 +88,7 @@ export default {
     fontSize: {
       konsultativDesk: ["1.125rem", { lineHeight: "1.0rem" }],
       bodyDesk: ["1.5rem", { lineHeight: "1.25rem" }],
-      baseDesk: ["1.938rem", { lineHeight: "1.5rem" }],
+      baseDesk: ["1.938rem", { lineHeight: "2.22rem" }],
       smallDesk: ["2.369rem", { lineHeight: "2.25rem" }],
       mediumDesk: ["3.156rem", { lineHeight: "3rem" }],
       largeDesk: ["3.456rem", { lineHeight: "3.75rem" }],
@@ -97,7 +97,7 @@ export default {
       bodyMobile: ["0.813rem", { lineHeight: "1.25rem" }],
       baseMobile: ["1rem", { lineHeight: "1.5rem" }],
       smallMobile: ["1.281rem", { lineHeight: "2.25rem" }],
-      mediumMobile: ["rem", { lineHeight: "3rem" }],
+      mediumMobile: ["1.7rem", { lineHeight: "3rem" }],
       largeMobile: ["2.113rem", { lineHeight: "3.2rem" }],
       xlargeMobile: ["2.988rem", { lineHeight: "4rem" }],
     },
