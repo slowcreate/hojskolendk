@@ -2,11 +2,11 @@
 const { url="#", cardimage="", cardimagealt="", ophold="", navnogalder="", citat="" } = Astro.props; 
 ---
 
-<article class="bg-beige-200/50 w-[450px] rounded-lg  md:w-[602px] flex flex-row">
-   <div class=" w-[400px] md:w-[800px]"> <img class="object-cover w-full h-full rounded-l-lg" src={cardimage} alt={cardimagealt}></div>
+<article class="bg-beige-200/50 w-[380px] h-[220px] rounded-md  md:rounded-xl  md:w-[602px] flex flex-row">
+   <div class=" w-[400px] md:w-[800px]"> <img class="object-cover w-full h-full rounded-md md:rounded-l-xl" src={cardimage} alt={cardimagealt}></div>
 <div class="flex flex-col justify-around gap-4 p-4 px-4 py-8">
-        <p class="text-orange-700">{ophold}</p>
+        <p class="text-orange-700 text-[11px] md:text-[18px]">{ophold}</p>
         <h6 class="text-petroleum-500">{navnogalder}</h6>
-        <p class="text-orange-900  leading-6">"{citat}"</p>
+        <p class="text-orange-900 text-[11px] md:text-[18px] leading-6">"{citat}"</p>
 </div>
 </article>
