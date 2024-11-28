@@ -5,25 +5,24 @@ import gouda from "../assets/images/gouda.png";
 import jyskrejsebureau from "../assets/images/jyskrejsebureau.png";
 import rejsegarantifonden from "../assets/images/rejsegarantifonden.png";
 ---
-<section >
+<section class=" bg-beige-200">
 
-<div class="grid grid-cols-2 md:flex md:flex-row justify-between">
-    <div>
-        <p class="text-[20.65px] font-bold md:text-[24px]">HÖJSKOLENDK</p>
-        <p>Rosenørns Allé 29</p>
-        <p>1970 Frederiksberg</p>
-        <p>Danmark</p>
-
+<div class=" gap-6 p-8 grid grid-cols-2 md:flex md:flex-row justify-between ">
+    <div class="flex flex-col justify-around">
+        <p class="text-[20.65px] font-bold md:text-[24px] text-beige-900 pb-2">HÖJSKOLENDK</p>
+        <p class="text-[13px] md:text-[16px] text-beige-950">Rosenørns Allé 29</p>
+        <p class="text-[13px] md:text-[16px] text-beige-950">1970 Frederiksberg</p>
+        <p class="text-[13px] md:text-[16px] text-beige-950">Danmark</p>
     </div>
-    <div class="text-right md:text-left">
-        <p class="text-[20.65px] font-bold md:text-[24px]">KONTAKT</p>
-        <p>Telefon: 7027 9007</p>
-        <p>Mandag til fredag //</p>
-        <p>Kl.10.00-16.00</p>
-        <p>Mail: info@hojskolendk.dk</p>
+    <div class="flex flex-col justify-around text-right md:text-left">
+        <p class="text-[20.65px] font-bold md:text-[24px] text-beige-900 pb-2">KONTAKT</p>
+        <p class="text-[13px] md:text-[16px] text-beige-950">Telefon: <span class="font-semibold underline">7027 9007</span></p>
+        <p class="text-[13px] md:text-[16px] text-beige-950">Mandag til fredag //</p>
+        <p class="text-[13px] md:text-[16px] text-beige-950">Kl.10.00-16.00</p>
+        <p class="text-[13px] md:text-[16px] text-beige-950">Mail: <span class="font-semibold underline">info@hojskolendk.dk</span></p>
     </div>
     <div class="col-span-2">
-        <p>SAMARBEJDSPARTNERE</p>
+        <p class="text-[20.65px] font-bold md:text-[24px] text-beige-900 pb-2">SAMARBEJDSPARTNERE</p>
         <div class="grid grid-cols-2">
         <Image class="" src={co2neutralt} alt="co2 neutralt"/>
         <Image class="" src={rejsegarantifonden} alt="rejsegaranti fonden"/>
@@ -33,16 +32,18 @@ import rejsegarantifonden from "../assets/images/rejsegarantifonden.png";
     </div>
 </div>
 
-<div class=" flex flex-col md:flex-row justify-between px-4 items-center pb-6 gap-4">
-    <p class="text-[13px] md:text-[16px]">HÖJSKOLENDK er medlem af Rejsegarantifonden</p>
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <circle cx="9" cy="9" r="9" fill="#FF5900"/>
-        </svg>
-    <p class="text-[13px] md:text-[16px]">Handelsbetingelser / Cookiepolitik / Data- & Privatlivspolitik</p>
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <circle cx="9" cy="9" r="9" fill="#FF5900"/>
-        </svg>
-    <p class="text-[13px] md:text-[16px]">Copyright © HÖJSKOLENDK 2022 • CVR 32491162</p>
+<div class="   border-t border-t-orange-500">
+<div class="flex flex-col md:flex-row justify-between px-8 items-center gap-4 py-8">
+        <p class="text-[13px] md:text-[16px] text-beige-900">HÖJSKOLENDK er medlem af Rejsegarantifonden</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <circle cx="9" cy="9" r="9" fill="#FF5900"/>
+            </svg>
+        <p class="text-[13px] md:text-[16px] text-beige-900">Handelsbetingelser / Cookiepolitik / Data- & Privatlivspolitik</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <circle cx="9" cy="9" r="9" fill="#FF5900"/>
+            </svg>
+        <p class="text-[13px] md:text-[16px] text-beige-900">Copyright © HÖJSKOLENDK 2022 • CVR 32491162</p>
+</div>
 </div>
 
 </section>
