@@ -11,52 +11,157 @@ import Photo4 from "../assets/images/collage/mountain.webp";
 import Photo5 from "../assets/images/collage/mountain-3.webp";
 import Photo6 from "../assets/images/collage/helmet.webp";
 import InfoMode from "../components/InfoMode.astro";
+import AnmeldelseCard from "../components/AnmeldelseCard.astro";
+import forsidebillede from "../assets/images/forside_billede.png"
+import VideoCards from "../components/VideoCards.astro";
 ---
-<MainLayout title="HöjskoleDK">
-	<article class="max-w-screen-xl mx-auto p-sm">
-		<h1>Höjskoledk</h1>
-		<h2>fællesskab</h2>
-		<h2>eventyr</h2>
-		<h2>livserfaring</h2>
-	</article>
-	<article class="w-[100%]">
-		<div class="relative">
-				<svg class="absolute -top-80" width="1359" height="1235" viewBox="0 0 1359 1235" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M1357 1234.5C1342.33 1154.17 1295.3 987.2 1224.5 962C1136 930.5 1038 1037.5 937.5 1016.5C857.1 999.7 807.5 936 789 906C770.5 876 735.352 824.51 781.5 729.5C807 677 885.48 656.567 905 719C931.104 802.493 730 769 673.5 649C618.855 532.939 685 339.828 685 293.5C685 210 624.5 39 469 37C344.6 35.4 245 122 137.5 86.5C30 51 68.5 6.8 0.5 2" stroke="#FF5900" stroke-width="3" stroke-dasharray="6 6"/>
-					</svg>
-			</div>
-		</article>
-	<section class="max-w-screen-xl m-auto">
-		<h2 class="text-orange-500 md:pl-32 pl-10">Tidligere rejsende</h2>
-		<article class="flex flex-row items-center flex-wrap place-content-between">
-	<div class="grid grid-cols-2 md:p-0 p-8">
-		<div class="grid justify-items-end content-start">
-			<Image class="p-3 md:h-60 w-auto" src={Photo4} alt="gruppe af elever med bjerg udsigt"/>
-			<Image class="pr-3 pb-3 md:h-48 w-auto" src={Photo2} alt="højskoleelever på bådtur"/>
-			<Image class="pr-3 pb-3 md:h-48 w-auto" src={Photo6} alt="Piger med motercykel hjelm på"/>
-		</div>
-		<div class="grid content-end">
-	<Image class="pb-3 md:h-48  w-auto" src={Photo3} alt="tre drenge der dykker med nissehue på"/>
-	<Image class="pr-3 pb-3 md:h-44 w-auto" src={Photo5} alt="to piger på et bjerg"/>
-	<Image class="md:h-60  w-auto" src={Photo1} alt="piger på farverig båd"/></div>
+<MainLayout title="HöjskolenDK">
+	<div class="top-0">
+		<Image src={forsidebillede} alt="forside"></Image>
 	</div>
-	<div class="max-w-xl flex flex-col gap-6 md:p-0 p-8">
-		<h6 class="text-turkis-800 md:text-smallDesk text-smallMobile">Højskole i udlandet</h6>
-		<p>Tag på højskole i udlandet og oplev et unikt eventyr, der kombinerer fællesskab, personlig udvikling og vilde rejseoplevelser. 
-		</p>
-		<p>Vælg mellem frivilligt arbejde, naturoplevelser, sprogundervisning og spændende eventyr, der styrker din selvtillid, selvindsigt og selvværd. Vores elever beskriver HÖJSKOLENDK som <span class="text-orange-500">"eventyrlige dannelsesrejser med noget på hjerte"</span>, hvor du udforsker dine drømme og mål i livet.</p>
-	<p>På højskole i udlandet får du:
-			<ul class="list-disc list-inside">
-				<li>Et stærkt fællesskab og spændende kulturmøder</li>
-				<li>Vilde naturoplevelser og adventure</li>
-				<li>En rejse, der styrker din selvtillid og personlig udvikling</li>
-				<li>Dygtige og engagerede undervisere</li>
-	</ul></p>
-	<p>Gå på opdagelse i dit livs eventyr med HÖJSKOLENDK – en rejse, der giver dig mod på livet og en afklaring af, hvad der virkelig betyder noget for dig.</p>
+	
+		<div>
+			<h1>Höj<span class="font-light">skolen</span>dk</h1>
+			<h2>fællesskab</h2>
+			<h2>eventyr</h2>
+			<h2>livserfaring</h2>
 	</div>
-</article>
+
+<div class="m-sm md:m-xl gap-4 grid md:grid-cols-2">
+	
+	<div class="md:w-[550px] flex flex-col gap-4 ">
+		<h2 class="text-orange-500 pb-6">Er du klar på et eventyr?</h2>
+		<p class="leading-5">HÖJSKOLENDK er en dansk højskole for unge mellem 18-30 år. Vi tilbyder eventyrlige højskoleophold i udlandet, hvor oplevelser, fællesskab og mødet med nye kulturer er i fokus.</p>
+		<p class="hidden md:block leading-5">Vi tilbyder inspirerende undervisning og stærkt sammenhold på din grupperejse. Som medlem af Rejsegarantifonden kan du være sikker på en tryg rejseoplevelse.</p>
+		<p class="leading-5">Vores højskoleophold er ideelt for dig, der ønsker at rejse med rygsæk, og drømmer om en fed grupperejse med andre skønne unge.</p>
+		<p class="leading-5">Vi ser frem til at lære dig at kende!</p>
+	</div>
+
+	<div class=" flex flex-col gap-6">	
+		<AnmeldelseCard
+		cardimage="/pp.png"
+		cardimagealt="anders profilbillede"
+		ophold="Australien, Bali, Gili"
+		navnogalder="Anders, 24 år"
+		citat="Jeg tog afsted med HÖJSKOLENDK uden helt at vide, hvad jeg gik ind til, men kom hjem med så meget mere, end jeg kunne have forestillet mig."
+		>
+	</AnmeldelseCard>
+	
+	<AnmeldelseCard
+		cardimage="/anna.png"
+		cardimagealt="anna profilbillede"
+		ophold="Caribien, Hawaii, Mexico"
+		navnogalder="Anna, 22 år"
+		citat="Denne rejse gav mig ny selvtillid og afklarede mine mål i livet. Jeg kan varmt anbefale det til alle, der søger eventyr og personlig udvikling!"
+		>
+	</AnmeldelseCard>
+	</div>
+</div>
+
+<section class="mx-8 my-20 ">
+<div class="flex flex-col items-center pb-8 justify-bewtween gap-4">
+		<h1 class="">REJSER</h1>
+		<h3>nye eventyre venter!</h3>
+</div>
+	<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mx-8">
+		<VideoCards
+		url="#", 
+		cardvideo="public/1.mp4",
+		ophold1="",
+		ophold2="", 
+		ophold3="", 
+		ophold4="Hawaii", 
+		ophold5="Mexico", 
+		ophold6="Caribien", 
+		months="3 måneder" 
+		></VideoCards>
+	
+		<VideoCards
+		url="#", 
+		cardvideo="public/2.mp4",
+		ophold1="",
+		ophold2="", 
+		ophold3="NZ", 
+		ophold4="Bali", 
+		ophold5="Australien", 
+		ophold6="Gili Islands", 
+		months="3 måneder" 
+		></VideoCards>
+	
+		<VideoCards
+		url="#", 
+		cardvideo="public/3.mov",
+		ophold1="",
+		ophold2="", 
+		ophold3="", 
+		ophold4="Mexico", 
+		ophold5="Colombia", 
+		ophold6="Costa Rica", 
+		months="3 måneder" 
+		></VideoCards>
+	
+		<VideoCards
+		url="#", 
+		cardvideo="public/4.mp4",
+		ophold1="",
+		ophold2="Nepal", 
+		ophold3="Indien", 
+		ophold4="Vietnam", 
+		ophold5="Sri Lanka", 
+		ophold6="Thailand", 
+		months="3 måneder" 
+		></VideoCards>
+	
+		<VideoCards
+		url="#", 
+		cardvideo="public/5.mp4",
+		ophold1="",
+		ophold2="Bali", 
+		ophold3="Japan", 
+		ophold4="Hawaii", 
+		ophold5="Australien", 
+		ophold6="Gili islands", 
+		months="3 måneder" 
+		></VideoCards>
+		<VideoCards
+		url="#", 
+		cardvideo="public/6.mp4",
+		ophold1="",
+		ophold2="", 
+		ophold3="Bali", 
+		ophold4="Sri Lanka", 
+		ophold5="Gili Islands", 
+		ophold6="Maldiverne", 
+		months="2 måneder" 
+		></VideoCards>
+	
+		<VideoCards
+		url="#", 
+		cardvideo="public/7.mp4",
+		ophold1="Peru",
+		ophold2="Bolivia", 
+		ophold3="Ecuador", 
+		ophold4="Colombia", 
+		ophold5="Brasilien", 
+		ophold6="Argentina", 
+		months="3 måneder" 
+		></VideoCards>
+		<VideoCards
+		url="#", 
+		cardvideo="public/8.mp4",
+		ophold1="",
+		ophold2="", 
+		ophold3="Bali", 
+		ophold4="Japan", 
+		ophold5="Gili Islands", 
+		ophold6="Australien", 
+		months="2 måneder" 
+		></VideoCards>
+	</div>
 </section>
 
-	<div class="mx-0"><InfoMode></InfoMode></div>
+	<div class="mx-0 ">
+		<InfoMode></InfoMode>
+	</div>
 
 </MainLayout>

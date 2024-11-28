@@ -1,0 +1,59 @@
+---
+const { url="#", cardvideo="",  ophold1="", ophold2="", ophold3="", ophold4="", ophold5="", ophold6="", months="" } = Astro.props; 
+---
+
+
+   <div class=" cursor-pointer video-container relative w-[180px] h-[250px] md:w-[320px] md:h-[450px] rounded-md md:rounded-xl overflow-hidden">
+    <div class="absolute bg-gradient-card-desktop z-10 h-full w-full rounded-md md:rounded-t-xl"></div>
+    <video class="video w-full h-full object-cover" src={cardvideo} muted  ></video>
+    <div class="text z-20 absolute inset-0 flex flex-col justify-center  p-4 transition-all">
+      <span class="text-turkis-300 text-[10px] text-lg  font-bold absolute top-6 right-6">{months}</span>
+      <div class="absolute left-4 bottom-2 md:bottom-10 flex flex-col md:gap-2 pt-8">
+        <h4 class="uppercase text-beige-200 text-[16px] md:text-[37.9px]">{ophold1}</h4>
+        <h4 class="uppercase text-beige-200 text-[16px] md:text-[37.9px]">{ophold2}</h4>
+        <h4 class="uppercase text-beige-200 text-[16px] md:text-[37.9px]">{ophold3}</h4>
+        <h4 class="uppercase text-beige-200 text-[16px] md:text-[37.9px]">{ophold4}</h4>
+        <h4 class="uppercase text-beige-200 text-[16px] md:text-[37.9px]">{ophold5}</h4>
+        <h4 class="uppercase text-beige-200 text-[16px] md:text-[37.9px]">{ophold6}</h4>
+      </div>
+    </div>
+  </div>
+
+<style>
+    .video-container .text {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.video-container:hover .text {
+    opacity: 0;
+    pointer-events: none; /* Ensures the hidden text does not interfere with interactions */
+}
+</style>
+
+<script>
+const videoContainers = document.querySelectorAll('.video-container');
+
+videoContainers.forEach(container => {
+    const video = container.querySelector('.video');
+
+    if ('ontouchstart' in window || navigator.maxTouchPoints) {
+        container.addEventListener('touchstart', function () {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    } else {
+        container.addEventListener('mouseenter', function () {
+            video.play();
+        });
+
+        container.addEventListener('mouseleave', function () {
+            video.pause();
+        });
+    }
+});
+</script>
+
