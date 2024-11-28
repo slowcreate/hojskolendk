@@ -19,18 +19,34 @@ import InfoMode from "../components/InfoMode.astro";
 		<h2>eventyr</h2>
 		<h2>livserfaring</h2>
 	</article>
-	<section>
-		<article class="grid grid-cols-2">
-	<div>
-		<div><Image src={Photo4} alt="gruppe af elever med bjerg udsigt"/>
-			<Image src={Photo2} alt="højskoleelever på bådtur"/>
-			<Image src={Photo6} alt="Piger med motercykel hjelm på"/>
+	<section class="max-w-[1300px] m-auto">
+		<h2>Tidligere rejsende</h2>
+		<article class="flex flex-row flex-wrap place-content-between">
+	<div class="grid grid-cols-2 md:p-0 p-8">
+		<div class="grid justify-items-end content-start">
+			<Image class="p-3 md:h-60 w-auto" src={Photo4} alt="gruppe af elever med bjerg udsigt"/>
+			<Image class="pr-3 pb-3 md:h-48 w-auto" src={Photo2} alt="højskoleelever på bådtur"/>
+			<Image class="pr-3 pb-3 md:h-48 w-auto" src={Photo6} alt="Piger med motercykel hjelm på"/>
 		</div>
-		<div><Image src={Photo1} alt="piger på farverig båd"/>
-	<Image src={Photo3} alt="tre drenge der dykker med nissehue på"/>
-	<Image src={Photo5} alt="to piger på et bjerg"/></div>
+		<div class="grid content-end">
+	<Image class="pb-3 md:h-48  w-auto" src={Photo3} alt="tre drenge der dykker med nissehue på"/>
+	<Image class="pr-3 pb-3 md:h-44 w-auto" src={Photo5} alt="to piger på et bjerg"/>
+	<Image class="md:h-60  w-auto" src={Photo1} alt="piger på farverig båd"/></div>
 	</div>
-	<div></div>
+	<div class="max-w-xl flex flex-col gap-6 md:p-0 p-8">
+		<h6 class="text-turkis-800">Højskole i udlandet</h6>
+		<p>Tag på højskole i udlandet og oplev et unikt eventyr, der kombinerer fællesskab, personlig udvikling og vilde rejseoplevelser. 
+		</p>
+		<p>Vælg mellem frivilligt arbejde, naturoplevelser, sprogundervisning og spændende eventyr, der styrker din selvtillid, selvindsigt og selvværd. Vores elever beskriver HÖJSKOLENDK som <span class="text-orange-500">"eventyrlige dannelsesrejser med noget på hjerte"</span>, hvor du udforsker dine drømme og mål i livet.</p>
+	<p>På højskole i udlandet får du:<br/>
+			<ul class="list-disc list-inside">
+				<li>Et stærkt fællesskab og spændende kulturmøder</li>
+				<li>Vilde naturoplevelser og adventure</li>
+				<li>En rejse, der styrker din selvtillid og personlig udvikling</li>
+				<li>Dygtige og engagerede undervisere</li>
+	</ul></p>
+	<p>Gå på opdagelse i dit livs eventyr med HÖJSKOLENDK – en rejse, der giver dig mod på livet og en afklaring af, hvad der virkelig betyder noget for dig.</p>
+	</div>
 </article>
 </section>
 
