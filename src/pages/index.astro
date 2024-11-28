@@ -7,6 +7,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 import InfoMode from "../components/InfoMode.astro";
 import AnmeldelseCard from "../components/AnmeldelseCard.astro";
 import forsidebillede from "../assets/images/forside_billede.png"
+import VideoCards from "../components/VideoCards.astro";
 ---
 <MainLayout title="HöjskolenDK">
 	<div class="top-0">
@@ -49,8 +50,112 @@ import forsidebillede from "../assets/images/forside_billede.png"
 		>
 	</AnmeldelseCard>
 	</div>
-	
 </div>
-	<div class="mx-0 "><InfoMode></InfoMode></div>
+
+<section class="mx-8 my-20 ">
+<div class="flex flex-col items-center pb-8 justify-bewtween gap-4">
+		<h1 class="">REJSER</h1>
+		<h3>nye eventyre venter!</h3>
+</div>
+	<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mx-8">
+		<VideoCards
+		url="#", 
+		cardvideo="public/1.mp4",
+		ophold1="",
+		ophold2="", 
+		ophold3="", 
+		ophold4="Hawaii", 
+		ophold5="Mexico", 
+		ophold6="Caribien", 
+		months="3 måneder" 
+		></VideoCards>
+	
+		<VideoCards
+		url="#", 
+		cardvideo="public/2.mp4",
+		ophold1="",
+		ophold2="", 
+		ophold3="NZ", 
+		ophold4="Bali", 
+		ophold5="Australien", 
+		ophold6="Gili Islands", 
+		months="3 måneder" 
+		></VideoCards>
+	
+		<VideoCards
+		url="#", 
+		cardvideo="public/3.mov",
+		ophold1="",
+		ophold2="", 
+		ophold3="", 
+		ophold4="Mexico", 
+		ophold5="Colombia", 
+		ophold6="Costa Rica", 
+		months="3 måneder" 
+		></VideoCards>
+	
+		<VideoCards
+		url="#", 
+		cardvideo="public/4.mp4",
+		ophold1="",
+		ophold2="Nepal", 
+		ophold3="Indien", 
+		ophold4="Vietnam", 
+		ophold5="Sri Lanka", 
+		ophold6="Thailand", 
+		months="3 måneder" 
+		></VideoCards>
+	
+		<VideoCards
+		url="#", 
+		cardvideo="public/5.mp4",
+		ophold1="",
+		ophold2="Bali", 
+		ophold3="Japan", 
+		ophold4="Hawaii", 
+		ophold5="Australien", 
+		ophold6="Gili islands", 
+		months="3 måneder" 
+		></VideoCards>
+		<VideoCards
+		url="#", 
+		cardvideo="public/6.mp4",
+		ophold1="",
+		ophold2="", 
+		ophold3="Bali", 
+		ophold4="Sri Lanka", 
+		ophold5="Gili Islands", 
+		ophold6="Maldiverne", 
+		months="2 måneder" 
+		></VideoCards>
+	
+		<VideoCards
+		url="#", 
+		cardvideo="public/7.mp4",
+		ophold1="Peru",
+		ophold2="Bolivia", 
+		ophold3="Ecuador", 
+		ophold4="Colombia", 
+		ophold5="Brasilien", 
+		ophold6="Argentina", 
+		months="3 måneder" 
+		></VideoCards>
+		<VideoCards
+		url="#", 
+		cardvideo="public/8.mp4",
+		ophold1="",
+		ophold2="", 
+		ophold3="Bali", 
+		ophold4="Japan", 
+		ophold5="Gili Islands", 
+		ophold6="Australien", 
+		months="2 måneder" 
+		></VideoCards>
+	</div>
+</section>
+
+	<div class="mx-0 ">
+		<InfoMode></InfoMode>
+	</div>
 
 </MainLayout>
