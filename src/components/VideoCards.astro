@@ -1,19 +1,20 @@
 ---
-// const { url="#", cardvideo="", cardvideoalt="", ophold1="", ophold2="", ophold3="", ophold4="", ophold5="", ophold6="", months="" } = Astro.props; 
+const { url="#", cardvideo="",  ophold1="", ophold2="", ophold3="", ophold4="", ophold5="", ophold6="", months="" } = Astro.props; 
 ---
 
 
-   <div class="container relative w-[320px] h-[450px] rounded-xl overflow-hidden">
-    <video class="w-full h-full object-cover" src="public/1.mp4" muted ></video>
-    <div class="text absolute inset-0 flex flex-col justify-center  p-4">
-      <span class="text-turkis-300 text-lg font-bold absolute top-6 right-6">3 måneder</span>
+   <div class="video-container relative w-[320px] h-[450px] rounded-xl overflow-hidden">
+    <div class="absolute bg-gradient-card-desktop z-10 h-full w-full rounded-t-xl"></div>
+    <video class="video w-full h-full object-cover" src={cardvideo} muted  ></video>
+    <div class="text z-20 absolute inset-0 flex flex-col justify-center  p-4 transition-all hover:hidden">
+      <span class="text-turkis-300 text-lg font-bold absolute top-6 right-6">{months}</span>
       <div class="absolute bottom-10 flex flex-col gap-2 pt-8">
-        <h4 class="uppercase text-beige-200">Peru</h4>
-        <h4 class="uppercase text-beige-200">Bolivia</h4>
-        <h4 class="uppercase text-beige-200">Ecuador</h4>
-        <h4 class="uppercase text-beige-200">Colombia</h4>
-        <h4 class="uppercase text-beige-200">Brasilien</h4>
-        <h4 class="uppercase text-beige-200">Argentina</h4>
+        <h4 class="uppercase text-beige-200">{ophold1}</h4>
+        <h4 class="uppercase text-beige-200">{ophold2}</h4>
+        <h4 class="uppercase text-beige-200">{ophold3}</h4>
+        <h4 class="uppercase text-beige-200">{ophold4}</h4>
+        <h4 class="uppercase text-beige-200">{ophold5}</h4>
+        <h4 class="uppercase text-beige-200">{ophold6}</h4>
       </div>
     </div>
   </div>
@@ -21,17 +22,28 @@
 
 
 <script>
-    const videos = document.querySelectorAll('.video');
+const videoContainers = document.querySelectorAll('.video-container');
 
-videos.forEach(video => {
-  video.addEventListener('mouseenter', () => {
-    video.play();
-  });
-  
-  video.addEventListener('mouseleave', () => {
-    video.pause();
-    video.currentTime = 0;
-  });
+videoContainers.forEach(container => {
+    const video = container.querySelector('.video');
+
+    if ('ontouchstart' in window || navigator.maxTouchPoints) {
+        container.addEventListener('touchstart', function () {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    } else {
+        container.addEventListener('mouseenter', function () {
+            video.play();
+        });
+
+        container.addEventListener('mouseleave', function () {
+            video.pause();
+        });
+    }
 });
 </script>
 
