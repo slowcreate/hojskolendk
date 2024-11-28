@@ -34,3 +34,14 @@
     @apply text-konsultativMobile md:text-konsultativDesk;
   }
 }
+
+@media (min-width: 769px) {
+  /* General classnames */
+  .pc-only {
+    display: block;
+  }
+
+  .pc-hide {
+    display: none;
+  }
+}

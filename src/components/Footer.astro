@@ -1,6 +1,49 @@
 ---
+import { Image } from 'astro:assets';
+import co2neutralt from "../assets/images/co2neutralt.png";
+import gouda from "../assets/images/gouda.png";
+import jyskrejsebureau from "../assets/images/jyskrejsebureau.png";
+import rejsegarantifonden from "../assets/images/rejsegarantifonden.png";
 ---
-<div>
-    <p class="max-w-screen-xl mx-auto">Footer - tilføj footerindhold</p>
+<section >
+
+<div class="grid grid-cols-2 md:flex md:flex-row justify-between">
+    <div>
+        <p class="text-[20.65px] font-bold md:text-[24px]">HÖJSKOLENDK</p>
+        <p>Rosenørns Allé 29</p>
+        <p>1970 Frederiksberg</p>
+        <p>Danmark</p>
+
+    </div>
+    <div class="text-right md:text-left">
+        <p class="text-[20.65px] font-bold md:text-[24px]">KONTAKT</p>
+        <p>Telefon: 7027 9007</p>
+        <p>Mandag til fredag //</p>
+        <p>Kl.10.00-16.00</p>
+        <p>Mail: info@hojskolendk.dk</p>
+    </div>
+    <div class="col-span-2">
+        <p>SAMARBEJDSPARTNERE</p>
+        <div class="grid grid-cols-2">
+        <Image class="" src={co2neutralt} alt="co2 neutralt"/>
+        <Image class="" src={rejsegarantifonden} alt="rejsegaranti fonden"/>
+        <Image class="" src={gouda} alt="Gouda"/>
+        <Image class="" src={jyskrejsebureau} alt="jysk rejsebureau"/>
+        </div>
+    </div>
 </div>
+
+<div class=" flex flex-col md:flex-row justify-between px-4 items-center pb-6 gap-4">
+    <p class="text-[13px] md:text-[16px]">HÖJSKOLENDK er medlem af Rejsegarantifonden</p>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <circle cx="9" cy="9" r="9" fill="#FF5900"/>
+        </svg>
+    <p class="text-[13px] md:text-[16px]">Handelsbetingelser / Cookiepolitik / Data- & Privatlivspolitik</p>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <circle cx="9" cy="9" r="9" fill="#FF5900"/>
+        </svg>
+    <p class="text-[13px] md:text-[16px]">Copyright © HÖJSKOLENDK 2022 • CVR 32491162</p>
+</div>
+
+</section>
       
