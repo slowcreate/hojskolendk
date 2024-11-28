@@ -13,32 +13,33 @@ import Photo6 from "../assets/images/collage/helmet.webp";
 import InfoMode from "../components/InfoMode.astro";
 import AnmeldelseCard from "../components/AnmeldelseCard.astro";
 import forsidebillede from "../assets/images/forside_billede.png"
+import mobilforside from "../assets/images/heromobil.png"
 import VideoCards from "../components/VideoCards.astro";
 
 ---
 <MainLayout title="HöjskolenDK">
-	<div class="top-0">
-		<Image src={forsidebillede} alt="forside"></Image>
+	<div class="relative ">
+		<Image src={mobilforside} alt="forside" class="md:hidden  absolute mt-[-170px] -z-30"></Image>
+		<Image src={forsidebillede} alt="forside" class="pc-only hidden md:block absolute mt-[-220px] -z-30"></Image>
 	</div>
 	
-		<div>
-			<h1>Höj<span class="font-light">skolen</span>dk</h1>
-			<h2>fællesskab</h2>
-			<h2>eventyr</h2>
-			<h2>livserfaring</h2>
+	<div class="md:hidden flex flex-row justify-between mx-10 ">
+		<h2 class="text-beige-50 text-[16px]">fællesskab</h2>
+		<h2 class="text-beige-50 text-[16px]">eventyr</h2>
+		<h2 class="text-beige-50 text-[16px]">livserfaring</h2>
+</div>
+		<div class="-z-50">
+			<div class="flex flex-row justify-center"><h1 >Höj<span class="font-light">skolen</span>dk</h1></div>
+		<div class="hidden md:flex flex-row justify-between md:mx-32 ">
+				<h2 class="text-beige-50 ">fællesskab</h2>
+				<h2 class="text-beige-50 ">eventyr</h2>
+				<h2 class="text-beige-50">livserfaring</h2>
+		</div>
 	</div>
 
-<div class="m-sm md:m-xl gap-4 grid md:grid-cols-2">
+<div class="m-sm md:m-xl gap-4 grid md:grid-cols-2 ">
 	
-	<div class="md:w-[550px] flex flex-col gap-4 ">
-		<h2 class="text-orange-500 pb-6">Er du klar på et eventyr?</h2>
-		<p class="leading-5">HÖJSKOLENDK er en dansk højskole for unge mellem 18-30 år. Vi tilbyder eventyrlige højskoleophold i udlandet, hvor oplevelser, fællesskab og mødet med nye kulturer er i fokus.</p>
-		<p class="hidden md:block leading-5">Vi tilbyder inspirerende undervisning og stærkt sammenhold på din grupperejse. Som medlem af Rejsegarantifonden kan du være sikker på en tryg rejseoplevelse.</p>
-		<p class="leading-5">Vores højskoleophold er ideelt for dig, der ønsker at rejse med rygsæk, og drømmer om en fed grupperejse med andre skønne unge.</p>
-		<p class="leading-5">Vi ser frem til at lære dig at kende!</p>
-	</div>
-
-	<div class=" flex flex-col gap-6">	
+	<div class="md:hidden flex flex-col justify-center ml-6 gap-6 mt-[300px] md:ml-12">	
 		<AnmeldelseCard
 		cardimage="/pp.png"
 		cardimagealt="anders profilbillede"
@@ -56,6 +57,36 @@ import VideoCards from "../components/VideoCards.astro";
 		citat="Denne rejse gav mig ny selvtillid og afklarede mine mål i livet. Jeg kan varmt anbefale det til alle, der søger eventyr og personlig udvikling!"
 		>
 	</AnmeldelseCard>
+	</div>
+
+	<div class="md:w-[550px] flex flex-col gap-4 mt-500px md:mt-[550px]">
+		<h2 class="text-orange-500 pb-2 md:pb-6">Er du klar på et eventyr?</h2>
+		<p class="leading-5">HÖJSKOLENDK er en dansk højskole for unge mellem 18-30 år. Vi tilbyder eventyrlige højskoleophold i udlandet, hvor oplevelser, fællesskab og mødet med nye kulturer er i fokus.</p>
+		<p class="hidden md:block leading-5">Vi tilbyder inspirerende undervisning og stærkt sammenhold på din grupperejse. Som medlem af Rejsegarantifonden kan du være sikker på en tryg rejseoplevelse.</p>
+		<p class="leading-5">Vores højskoleophold er ideelt for dig, der ønsker at rejse med rygsæk, og drømmer om en fed grupperejse med andre skønne unge.</p>
+		<p class="leading-5">Vi ser frem til at lære dig at kende!</p>
+	</div>
+
+	<div class="hidden md:block">
+		<div class=" flex flex-col gap-6  md:ml-12 md:mt-[385px]">	
+			<AnmeldelseCard
+			cardimage="/pp.png"
+			cardimagealt="anders profilbillede"
+			ophold="Australien, Bali, Gili"
+			navnogalder="Anders, 24 år"
+			citat="Jeg tog afsted med HÖJSKOLENDK uden helt at vide, hvad jeg gik ind til, men kom hjem med så meget mere, end jeg kunne have forestillet mig."
+			>
+		</AnmeldelseCard>
+		
+		<AnmeldelseCard
+			cardimage="/anna.png"
+			cardimagealt="anna profilbillede"
+			ophold="Caribien, Hawaii, Mexico"
+			navnogalder="Anna, 22 år"
+			citat="Denne rejse gav mig ny selvtillid og afklarede mine mål i livet. Jeg kan varmt anbefale det til alle, der søger eventyr og personlig udvikling!"
+			>
+		</AnmeldelseCard>
+		</div>
 	</div>
 </div>
 <article class="w-[100%]">
@@ -113,7 +144,7 @@ import VideoCards from "../components/VideoCards.astro";
 	<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mx-8">
 		<VideoCards
 		url="#", 
-		cardvideo="public/1.mp4",
+		cardvideo="/1.mp4",
 		ophold1="",
 		ophold2="", 
 		ophold3="", 
@@ -125,7 +156,7 @@ import VideoCards from "../components/VideoCards.astro";
 	
 		<VideoCards
 		url="#", 
-		cardvideo="public/2.mp4",
+		cardvideo="/2.mp4",
 		ophold1="",
 		ophold2="", 
 		ophold3="NZ", 
@@ -137,7 +168,7 @@ import VideoCards from "../components/VideoCards.astro";
 	
 		<VideoCards
 		url="#", 
-		cardvideo="public/3.mov",
+		cardvideo="/3.mov",
 		ophold1="",
 		ophold2="", 
 		ophold3="", 
@@ -149,7 +180,7 @@ import VideoCards from "../components/VideoCards.astro";
 	
 		<VideoCards
 		url="#", 
-		cardvideo="public/4.mp4",
+		cardvideo="/4.mp4",
 		ophold1="",
 		ophold2="Nepal", 
 		ophold3="Indien", 
@@ -161,7 +192,7 @@ import VideoCards from "../components/VideoCards.astro";
 	
 		<VideoCards
 		url="#", 
-		cardvideo="public/5.mp4",
+		cardvideo="/5.mp4",
 		ophold1="",
 		ophold2="Bali", 
 		ophold3="Japan", 
@@ -172,7 +203,7 @@ import VideoCards from "../components/VideoCards.astro";
 		></VideoCards>
 		<VideoCards
 		url="#", 
-		cardvideo="public/6.mp4",
+		cardvideo="/6.mp4",
 		ophold1="",
 		ophold2="", 
 		ophold3="Bali", 
@@ -184,7 +215,7 @@ import VideoCards from "../components/VideoCards.astro";
 	
 		<VideoCards
 		url="#", 
-		cardvideo="public/7.mp4",
+		cardvideo="/7.mp4",
 		ophold1="Peru",
 		ophold2="Bolivia", 
 		ophold3="Ecuador", 
@@ -195,7 +226,7 @@ import VideoCards from "../components/VideoCards.astro";
 		></VideoCards>
 		<VideoCards
 		url="#", 
-		cardvideo="public/8.mp4",
+		cardvideo="/8.mp4",
 		ophold1="",
 		ophold2="", 
 		ophold3="Bali", 
@@ -206,8 +237,8 @@ import VideoCards from "../components/VideoCards.astro";
 		></VideoCards>
 	</div>
 </section>
-</div>
-	<div class="mx-0 md:mt-64 mt-56">
+
+	<div class="flex flex-col justify-center mb-48 ">
 		<InfoMode></InfoMode>
 	</div>
 
