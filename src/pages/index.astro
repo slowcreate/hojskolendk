@@ -4,6 +4,12 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
+import Photo1 from "../assets/images/collage/boat-1.webp";
+import Photo2 from "../assets/images/collage/boat-3.webp";
+import Photo3 from "../assets/images/collage/dive.webp";
+import Photo4 from "../assets/images/collage/mountain.webp";
+import Photo5 from "../assets/images/collage/mountain-3.webp";
+import Photo6 from "../assets/images/collage/helmet.webp";
 import InfoMode from "../components/InfoMode.astro";
 ---
 <MainLayout title="HöjskoleDK">
@@ -13,6 +19,20 @@ import InfoMode from "../components/InfoMode.astro";
 		<h2>eventyr</h2>
 		<h2>livserfaring</h2>
 	</article>
+	<section>
+		<article class="grid grid-cols-2">
+	<div>
+		<div><Image src={Photo4} alt="gruppe af elever med bjerg udsigt"/>
+			<Image src={Photo2} alt="højskoleelever på bådtur"/>
+			<Image src={Photo6} alt="Piger med motercykel hjelm på"/>
+		</div>
+		<div><Image src={Photo1} alt="piger på farverig båd"/>
+	<Image src={Photo3} alt="tre drenge der dykker med nissehue på"/>
+	<Image src={Photo5} alt="to piger på et bjerg"/></div>
+	</div>
+	<div></div>
+</article>
+</section>
 
 	<div class="mx-0"><InfoMode></InfoMode></div>
 
