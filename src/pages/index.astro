@@ -6,14 +6,19 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import InfoMode from "../components/InfoMode.astro";
 import AnmeldelseCard from "../components/AnmeldelseCard.astro";
+import forsidebillede from "../assets/images/forside_billede.png"
 ---
 <MainLayout title="HöjskolenDK">
-	<article class="max-w-screen-xl mx-auto p-sm">
-		<h1>Höj<span class="font-light">skolen</span>dk</h1>
-		<h2>fællesskab</h2>
-		<h2>eventyr</h2>
-		<h2>livserfaring</h2>
-	</article>
+	<div class="top-0">
+		<Image src={forsidebillede} alt="forside"></Image>
+	</div>
+	
+		<div>
+			<h1>Höj<span class="font-light">skolen</span>dk</h1>
+			<h2>fællesskab</h2>
+			<h2>eventyr</h2>
+			<h2>livserfaring</h2>
+	</div>
 
 <div class="m-sm md:m-xl gap-4 grid md:grid-cols-2">
 	
