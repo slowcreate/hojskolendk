@@ -7,34 +7,45 @@ import thumbsup from "../assets/images/thumbsup.png";
 import InfoMode from "../components/InfoMode.astro";
 import AnmeldelseCard from "../components/AnmeldelseCard.astro";
 ---
-<MainLayout title="HöjskoleDK">
+<MainLayout title="HöjskolenDK">
 	<article class="max-w-screen-xl mx-auto p-sm">
-		<h1>Höjskoledk</h1>
+		<h1>Höj<span class="font-light">skolen</span>dk</h1>
 		<h2>fællesskab</h2>
 		<h2>eventyr</h2>
 		<h2>livserfaring</h2>
 	</article>
 
-<div class="m-sm md:m-xl flex flex-col gap-6">	
+<div class="m-sm md:m-xl gap-4 grid md:grid-cols-2">
+	
+	<div class="md:w-[550px]">
+		<h2 class="text-orange-500">Er du klar på et eventyr?</h2>
+		<p>HÖJSKOLENDK er en dansk højskole for unge mellem 18-30 år. Vi tilbyder eventyrlige højskoleophold i udlandet, hvor oplevelser, fællesskab og mødet med nye kulturer er i fokus.</p>
+		<p class="hidden md:block">Vi tilbyder inspirerende undervisning og stærkt sammenhold på din grupperejse. Som medlem af Rejsegarantifonden kan du være sikker på en tryg rejseoplevelse.</p>
+		<p>Vores højskoleophold er ideelt for dig, der ønsker at rejse med rygsæk, og drømmer om en fed grupperejse med andre skønne unge.</p>
+		<p>Vi ser frem til at lære dig at kende!</p>
+	</div>
+
+	<div class=" flex flex-col gap-6">	
+		<AnmeldelseCard
+		cardimage="/pp.png"
+		cardimagealt="anders profilbillede"
+		ophold="Australien, Bali, Gili"
+		navnogalder="Anders, 22 år"
+		citat="Jeg tog afsted med HÖJSKOLENDK uden helt at vide, hvad jeg gik ind til, men kom hjem med så meget mere, end jeg kunne have forestillet mig."
+		>
+	</AnmeldelseCard>
+	
 	<AnmeldelseCard
-	cardimage="/pp.png"
-	cardimagealt="anders profilbillede"
-	ophold="Australien, Bali, Gili"
-	navnogalder="Anders, 22 år"
-	citat="Jeg tog afsted med HÖJSKOLENDK uden helt at vide, hvad jeg gik ind til, men kom hjem med så meget mere, end jeg kunne have forestillet mig."
-	>
-</AnmeldelseCard>
-
-<AnmeldelseCard
-	cardimage="/anna.png"
-	cardimagealt="anna profilbillede"
-	ophold="Caribien, Hawaii, Mexico"
-	navnogalder="Anna, 24 år"
-	citat="Denne rejse gav mig ny selvtillid og afklarede mine mål i livet. Jeg kan varmt anbefale det til alle, der søger eventyr og personlig udvikling!"
-	>
-</AnmeldelseCard>
+		cardimage="/anna.png"
+		cardimagealt="anna profilbillede"
+		ophold="Caribien, Hawaii, Mexico"
+		navnogalder="Anna, 24 år"
+		citat="Denne rejse gav mig ny selvtillid og afklarede mine mål i livet. Jeg kan varmt anbefale det til alle, der søger eventyr og personlig udvikling!"
+		>
+	</AnmeldelseCard>
+	</div>
+	
 </div>
-
 	<div class="mx-0"><InfoMode></InfoMode></div>
 
 </MainLayout>
