@@ -8,7 +8,7 @@ destination="", varighed="", firstdestination="", seconddestination="", thirddes
 
 ---
 
-<article class="card @container w-[425px] text-turkis-50 rounded-b-xl shadow-drop mb-16">
+<article class="card @container w-[425px] text-turkis-50 rounded-xl shadow-drop mb-16">
     <a href={url} class="flex flex-col justify-between h-full">
     <section class="relative rounded-t-xl">
         <div class="absolute bg-gradient-card-desktop z-10 h-80 w-full rounded-t-xl"></div>
@@ -32,11 +32,10 @@ destination="", varighed="", firstdestination="", seconddestination="", thirddes
             <p>{thirddestination}</p>
         </div>
         <div class="knapper flex flex-col justify-self-center gap-4 -mt-16">
-                <Button>læs mere</Button>
-                <Button>tilmeld infomøde</Button>
+                <Button size="small">læs mere</Button>
+                <Button size="small">tilmeld infomøde</Button>
         </div>
     </section>
-   
     </a>
 </article>
 
@@ -51,6 +50,7 @@ destination="", varighed="", firstdestination="", seconddestination="", thirddes
 
 .card:hover .knapper{
     opacity: 1;
+    z-index: 50;
 }
 
 </style>

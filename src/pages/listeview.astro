@@ -6,8 +6,10 @@ import InfoMode from "../components/InfoMode.astro";
 
 <MainLayout title="Vores ophold">
     <article class="max-w-screen-xl mx-auto">
-        <h1>Højskole-ophold</h1>
-        <h2>Alle rejser er inkluderet tur/retur billet!</h2>
+        <div class="ml-7">
+            <h1>Højskole-ophold</h1>
+            <h2>Alle rejser er inkluderet tur/retur billet!</h2>
+        </div>
         <div class="relative mr-20">
             <svg class="absolute w-10 md:w-12 -right-16 lg:right-16 top-24 lg:top-20" id="filter" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85 85">
             <defs>
@@ -30,7 +32,7 @@ import InfoMode from "../components/InfoMode.astro";
             </svg>
         </div>
         <div class="relative -z-20">
-            <svg class="absolute -top-16 md:-top-80 -right-5 w-[280px] md:w-[500px] " id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 476.24 514.62">
+            <svg class="absolute -top-16 md:-top-80 right-1 w-[280px] md:w-[500px] " id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 476.24 514.62">
                 <defs>
                     <style>
                     .cls-1 {
@@ -136,9 +138,9 @@ import InfoMode from "../components/InfoMode.astro";
                 destination="Indien -  Nepal - Thailand - Vietnam - Sri Lanka"
                 varighed="3 måneder"
                 pris="67.900 DKK"
-                firstdestination="New York City, USA Oahu, Hawaii"
-                seconddestination="Playa del Carmen, Mexico"
-                thirddestination="St. Croix & Puerto Rico, Caribien"
+                firstdestination="Kathmandu, Nepal"
+                seconddestination="Pokhara, Nepal + Dharamsala & New Delhi, Indien"
+                thirddestination="Sri Lanka & Vietnam"
                 ></ListviewCard><ListviewCard
                 url="#"
                 cardimage="/card_three.webp"        
@@ -147,9 +149,9 @@ import InfoMode from "../components/InfoMode.astro";
                 destination="Costa Rica - Mexico - Colombia"
                 varighed="3 måneder"
                 pris="67.900 DKK"
-                firstdestination="New York City, USA Oahu, Hawaii"
-                seconddestination="Playa del Carmen, Mexico"
-                thirddestination="St. Croix & Puerto Rico, Caribien"
+                firstdestination="Cancun, Playa Del Carmen, Rio Lagartos & Isla Holbox, Mexico"
+                seconddestination="San Jose, Puerto Viejo & Monteverde, Costa Rica"
+                thirddestination="Cartagena, La Boquilla, Minca & Bogota, Colombia"
                 ></ListviewCard> 
                 <ListviewCard
                 url="#"
@@ -159,9 +161,9 @@ import InfoMode from "../components/InfoMode.astro";
                 destination="Australien - New Zealand - Bali - Gili Islands"
                 varighed="3 måneder"
                 pris="67.900 DKK"
-                firstdestination="New York City, USA Oahu, Hawaii"
-                seconddestination="Playa del Carmen, Mexico"
-                thirddestination="St. Croix & Puerto Rico, Caribien"
+                firstdestination="Ubud, Bali & Gili Islands"
+                seconddestination="Byron Bay, Australien"
+                thirddestination="Queenstown, New Zealand"
                 ></ListviewCard>
             </div>
             <div>
@@ -173,9 +175,9 @@ import InfoMode from "../components/InfoMode.astro";
                 destination="Hawaii - Australien - Japan - Bali - Gili Islands"
                 varighed="3 måneder"
                 pris="67.900 DKK"
-                firstdestination="New York City, USA Oahu, Hawaii"
-                seconddestination="Playa del Carmen, Mexico"
-                thirddestination="St. Croix & Puerto Rico, Caribien"
+                firstdestination="New York City, USA"
+                seconddestination="Oahu, Hawaii"
+                thirddestination="Byron Bay, Australien"
                 ></ListviewCard><ListviewCard
                 url="#"
                 cardimage="/card_six.webp"        
@@ -184,9 +186,9 @@ import InfoMode from "../components/InfoMode.astro";
                 destination="Maldiverne - Sri Lanka - Bali - Gili Islands"
                 varighed="2 måneder"
                 pris="52.500 DKK"
-                firstdestination="New York City, USA Oahu, Hawaii"
-                seconddestination="Playa del Carmen, Mexico"
-                thirddestination="St. Croix & Puerto Rico, Caribien"
+                firstdestination="Dhiffushi, Maldiverne"
+                seconddestination="Dambulla, Kandy, Ella & Weligama, Sri Lanka"
+                thirddestination="Ubud, Bali & Gili Air"
                 ></ListviewCard>
                 <ListviewCard
                 url="#"
@@ -196,9 +198,9 @@ import InfoMode from "../components/InfoMode.astro";
                 destination="Brasilien - Bolivia - Colombia - Equador - Peru - Argentina"
                 varighed="3 måneder"
                 pris="74.900 DKK"
-                firstdestination="New York City, USA Oahu, Hawaii"
-                seconddestination="Playa del Carmen, Mexico"
-                thirddestination="St. Croix & Puerto Rico, Caribien"
+                firstdestination="Bogotá, Minca, La Boquilla & Cartagena, Colombia"
+                seconddestination="Quito, Amazonas & Baños, Ecuador"
+                thirddestination="Cusco & Sacred Valley, Peru"
                 ></ListviewCard>
                 <ListviewCard
                 url="#"
@@ -208,14 +210,16 @@ import InfoMode from "../components/InfoMode.astro";
                 destination="Australien - Japan - Bali - Gili Islands"
                 varighed="2 måneder"
                 pris="54.900 DKK"
-                firstdestination="New York City, USA Oahu, Hawaii"
-                seconddestination="Playa del Carmen, Mexico"
-                thirddestination="St. Croix & Puerto Rico, Caribien"
+                firstdestination="Bali & Gili Islands, Indonesien"
+                seconddestination="Byron Bay, Australien"
+                thirddestination="Tokyo, Kyoto, Osaka & Hiroshima, Japan"
                 ></ListviewCard>
                 
             </div>
         </section>
-        <InfoMode></InfoMode>
+        <div class="ml-16 mt-4">
+            <InfoMode></InfoMode>    
+        </div>
     </article>
 </MainLayout>
 
