@@ -1,34 +1,38 @@
 ---
 import { Image } from 'astro:assets';
 import place from "../assets/images/place.svg";
+import Button from './Button.astro';
 ---
+<section class="pb-xl mx-4 md:mx-2xl">
+    <div class="">
+            <h1 class="text-[61.04px]">Jeg vil vide mere!</h1>
+            <h3 class="text-orange-700 md:text-[48.83px]">Kom til infomøde og mød tidligere elever</h3>
+    </div>
 
-
- <div class="pb-xl mx-4 md:mx-2xl">
-        <h1 class="text-[61.04px]">Jeg vil vide mere!</h1>
-        <h3 class="text-orange-700 md:text-[48.83px]">Kom til infomøde og mød tidligere elever</h3>
- </div>
-
- <div class="flex flex-col md:flex-row gap-20 md:gap-24 mb-16 md:mx-xl">
-  <div class="bg-turkis-200 md:bg-transparent w-screen p-4 pb-6">
-        <div class="flex flex-col justify-between gap-8 ">
-            <div class="flex flex-row items-center">
-                <Image src={place} alt="place icon"/>
-                <p class="text-[32px] md:text-[46px] text-orange-500 font-bold">KØBENHAVN</p>
+    <div class="flex flex-col md:flex-row gap-20 md:gap-24 my-16 md:mx-xl">
+    <div class="bg-turkis-200 md:bg-transparent w-screen p-4 pb-6">
+            <div class="flex flex-col justify-between gap-8 ">
+                <div class="flex flex-row items-center">
+                    <Image src={place} alt="place icon"/>
+                    <p class="text-[32px] md:text-[46px] text-orange-500 font-bold">KØBENHAVN</p>
+                </div>
+                <p class="font-bold text-orange-700 text-[20.65px] md:text-[28px]">Studenterhuset</p>
+                <p class="font-bold text-orange-700 text-[20.65px] md:text-[28px]">Købmagergade 52 - 1150 København K</p>
             </div>
-            <p class="font-bold text-orange-700 text-[20.65px] md:text-[28px]">Studenterhuset</p>
-            <p class="font-bold text-orange-700 text-[20.65px] md:text-[28px]">Købmagergade 52 - 1150 København K</p>
-        </div>
-  </div>
-   
-  <div class="bg-turkis-200 md:bg-transparent w-screen p-4 pb-6">
-        <div class="flex flex-col justify-between gap-8">
-            <div class="flex flex-row items-center">
-                <Image src={place} alt="place icon"/>
-                <p class="text-[32px] md:text-[46px] text-orange-500 font-bold">AARHUS</p>
+    </div>
+    
+    <div class="bg-turkis-200 md:bg-transparent w-screen p-4 pb-6">
+            <div class="flex flex-col justify-between gap-8">
+                <div class="flex flex-row items-center">
+                    <Image src={place} alt="place icon"/>
+                    <p class="text-[32px] md:text-[46px] text-orange-500 font-bold">AARHUS</p>
+                </div>
+                <p class="font-bold text-orange-700 text-[20.65px] md:text-[28px]">LYNfabrikken</p>
+                <p class="font-bold text-orange-700 text-[20.65px] md:text-[28px]">Vestergade 49B - 8000 Aarhus</p>
             </div>
-            <p class="font-bold text-orange-700 text-[20.65px] md:text-[28px]">LYNfabrikken</p>
-            <p class="font-bold text-orange-700 text-[20.65px] md:text-[28px]">Vestergade 49B - 8000 Aarhus</p>
-        </div>
-  </div>
- </div>
+    </div>
+    </div>
+    <div class="flex justify-self-center">
+        <Button variant="primary" size="medium">Tilmeld infomøde</Button>
+    </div>
+</section>
