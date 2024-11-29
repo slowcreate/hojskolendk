@@ -29,8 +29,8 @@ import VideoCards from "../components/VideoCards.astro";
 		<h2 class="text-beige-50 text-[16px]">livserfaring</h2>
 </div>
 		<div class="-z-50">
-			<div class="flex flex-row justify-center"><h1 >Höj<span class="font-light">skolen</span>dk</h1></div>
-		<div class="hidden md:flex flex-row justify-between md:mx-32 ">
+			<div class="flex flex-row justify-center section1"><h1 >Höj<span class="font-light">skolen</span>dk</h1></div>
+		<div class="hidden md:flex flex-row justify-between md:mx-32 section2">
 				<h2 class="text-beige-50 ">fællesskab</h2>
 				<h2 class="text-beige-50 ">eventyr</h2>
 				<h2 class="text-beige-50">livserfaring</h2>
@@ -59,7 +59,7 @@ import VideoCards from "../components/VideoCards.astro";
 	</AnmeldelseCard>
 	</div>
 
-	<div class="md:w-[550px] flex flex-col gap-4 mt-500px md:mt-[550px]">
+	<div class="md:w-[550px] flex flex-col gap-4 mt-500px md:mt-[550px] section3">
 		<h2 class="text-orange-500 pb-2 md:pb-6">Er du klar på et eventyr?</h2>
 		<p class="leading-5">HÖJSKOLENDK er en dansk højskole for unge mellem 18-30 år. Vi tilbyder eventyrlige højskoleophold i udlandet, hvor oplevelser, fællesskab og mødet med nye kulturer er i fokus.</p>
 		<p class="hidden md:block leading-5">Vi tilbyder inspirerende undervisning og stærkt sammenhold på din grupperejse. Som medlem af Rejsegarantifonden kan du være sikker på en tryg rejseoplevelse.</p>
@@ -110,7 +110,7 @@ import VideoCards from "../components/VideoCards.astro";
 <Image class="pr-3 pb-3 md:h-44 w-auto" src={Photo5} alt="to piger på et bjerg"/>
 <Image class="md:h-60  w-auto" src={Photo1} alt="piger på farverig båd"/></div>
 </div>
-<div class="max-w-xl flex flex-col gap-6 md:p-0 p-8">
+<div class="max-w-xl flex flex-col gap-6 md:p-0 p-8 section4">
 	<h6 class="text-turkis-800 md:text-smallDesk text-smallMobile">Højskole i udlandet</h6>
 	<p>Tag på højskole i udlandet og oplev et unikt eventyr, der kombinerer fællesskab, personlig udvikling og vilde rejseoplevelser. 
 	</p>
@@ -147,7 +147,7 @@ import VideoCards from "../components/VideoCards.astro";
 			</div>
 		</article>
 <section class="mx-8 mb-20 md:mt-60 mt-20">
-<div class="flex flex-col items-center pb-8 justify-bewtween gap-4">
+<div class="flex flex-col items-center pb-8 mb-8 justify-bewtween gap-4 section5">
 		<h1 class="">REJSER</h1>
 		<h3>Nye eventyr venter!</h3>
 </div>
@@ -253,3 +253,39 @@ import VideoCards from "../components/VideoCards.astro";
 	</div>
 
 </MainLayout>
+
+
+<script>
+	import { inView } from "motion";
+
+	const inviewelement = document.querySelector(".section1");
+	inView(
+		inviewelement , () => {
+			inviewelement.classList.add("animate__animated","animate__fadeInDown", "animate__delay-1s")
+		})
+
+		const inviewelement1 = document.querySelector(".section2");
+	inView(
+		inviewelement1 , () => {
+			inviewelement1.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+		
+		const inviewelement2 = document.querySelector(".section3");
+	inView(
+		inviewelement2 , () => {
+			inviewelement2.classList.add("animate__animated","animate__fadeIn", "animate__delay-1s")
+		})
+
+		const inviewelement3 = document.querySelector(".section4");
+	inView(
+		inviewelement3 , () => {
+			inviewelement3.classList.add("animate__animated","animate__fadeIn", "animate__delay-1s")
+		})
+
+		const inviewelement4 = document.querySelector(".section5");
+	inView(
+		inviewelement4 , () => {
+			inviewelement4.classList.add("animate__animated","animate__fadeIn", "animate__delay-1s")
+		})
+
+</script>
