@@ -4,7 +4,7 @@ import place from "../assets/images/place.svg";
 import Button from './Button.astro';
 ---
 <section class="pb-xl mx-4 md:mx-2xl">
-    <div class="">
+    <div class="section6">
             <h1 class="text-[61.04px]">Jeg vil vide mere!</h1>
             <h3 class="text-orange-700 md:text-[48.83px]">Kom til infomøde og mød tidligere elever</h3>
     </div>
@@ -36,3 +36,13 @@ import Button from './Button.astro';
         <Button variant="primary" size="medium">Tilmeld infomøde</Button>
     </div>
 </section>
+
+<script>
+	import { inView } from "motion";
+
+const inviewelement5 = document.querySelector(".section6");
+	inView(
+		inviewelement5 , () => {
+			inviewelement5.classList.add("animate__animated","animate__fadeInLeft", "animate__delay-1s")
+		})
+</script>
